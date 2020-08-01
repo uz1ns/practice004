@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Honeymoon</title>
+    <style>
+      body{
+        background-image: url('bariloche.jpg');
+        background-size: 100%;
+      }
+      h1{
+       font-size:100px;
+       text-align: center;
+       color: white;
+       margin: 0;
+      }
+      body{
+        background-color:black;
+      }
+      h2{
+        color: white;
+        text-align: center;
+        font-size:60px
+      }
+      h3{
+        text-align: center;
+        color: white;
+        font-size:18px;
+      }
+      h4{
+        color: white;
+        margin-top:5%;
+      }
+      #places{
+        text-align: center;
+        font-size: 30px;
+      }
+      #clock{
+        text-align: center;
+        font-size: 40px;
+      }
+
+      </style>
+
+  </head>
+  <body>
+    <h4><b> <div id="clock"></div></b> </h4>
+<br><br>
+<h1>200215</h1>
+<h2>Good Evening, Pau.</h2>
+<h3> I wanna go beautiful places with you.<br>
+<!--*One of them is Jeji island which we failed to go because of my appendix.<br>
+And one is Porto in Portugal. One is your city, Gdynia! <br>
+Also we cannot miss our honeymoon in Bali :) <br>
+-->
+
+I wanna see sunset with you. Such a Romantic, Right?<p>
+Yesterday, Today, Tomorrow, The day after tomorrow<br>
+Always I want to be with you, Pau because I love you Bardzo! <p>so where do you wanna go first?<br> </h3>
+
+
+
+<br>
+<div id="places">
+<input type="button" style="WIDTH: 50pt; HEIGHT: 30pt; font-size:15px;" value="Gdynia" onclick="window.open('gdynia.html')">
+<input type="button" style="WIDTH: 50pt; HEIGHT: 30pt; font-size:15px;" value="Porto" onclick="window.open('porto.html')">
+<input type="button" style="WIDTH: 50pt; HEIGHT: 30pt; font-size:15px;" value="Jeju" onclick="window.open('jeju.html')">
+<input type="button" style="WIDTH: 50pt; HEIGHT: 30pt; font-size:15px;" value="Bali" onclick="window.open('bali.html')">
+</div>
+
+<script>
+function printTime() {
+              var clock = document.getElementById("clock");            // 출력할 장소 선택
+              var now = new Date();                                                  // 현재시간
+             // var nowTime = now.getFullYear() + "년" + (now.getMonth()+1) + "월" + now.getDate() + "일" + now.getHours() + "시" + now.getMinutes() + "분" + now.getSeconds() + "초";
+    var nowTime = now.getHours() + " : " + now.getMinutes() + " : " + now.getSeconds() + " ";
+              clock.innerHTML = nowTime;           // 현재시간을 출력
+              setTimeout("printTime()",1000);         // setTimeout(“실행할함수”,시간) 시간은1초의 경우 1000
+}
+window.onload = function() {                         // 페이지가 로딩되면 실행
+              printTime();
+}
+</script>
+<h4><b> <div id="clock"></div></b> </h4>
+
+  </body>
+</html>
